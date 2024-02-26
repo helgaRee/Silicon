@@ -1,0 +1,12 @@
+﻿<footer>
+    <div class="container">
+       @*Conditioning rendering del: väljer en class från bootstrap eller min social-media*@
+        <div class="@((ViewContext.RouteData.Values["Controller"]!.ToString() == "Auth") ? "d-none" : "social-media")>
+            <a class="btn-social" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a class="btn-social" href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a class="btn-social" href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a class="btn-social" href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>&copy; @DateTime.Now.Year Silicon by CreatexStudio. All rights reserved. <span>Pulvania rune condemtied.......</span></p>
+    </div>
+</footer>
