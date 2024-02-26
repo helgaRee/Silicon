@@ -1,0 +1,47 @@
+﻿#signin {
+    height: 100%;
+
+
+
+    .container {
+
+
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "email" "password" "remember" "button" "forgot";
+
+            #form-email {
+                grid-area: email;
+            }
+
+            #form-firstname {
+                grid-area: firstname;
+            }
+
+            #form-lastname {
+                grid-area: lastname;
+            }
+
+            #form-remember {
+                grid-area: remember;
+            }
+
+            #form-password {
+                grid-area: password;
+            }
+
+            #form-button {
+                grid-area: button;
+            }
+
+            #form-forgot-password {
+                width: 100%;
+                grid-area: forgot;
+                margin: 1rem 0 0 0;
+                text-align: center;
+            }
+        }
+    }
+}
