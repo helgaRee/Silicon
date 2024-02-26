@@ -401,6 +401,20 @@ form .input-group {
   margin: 1rem 0;
   display: grid;
 }
+form .Checkbox span {
+  display: block;
+}
+form .Checkbox span.field-validation-error {
+  position: static;
+  top: 0;
+  right: 0;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #EF4444;
+}
 form .checkbox-group {
   margin: 1rem 0;
   display: flex;
@@ -411,6 +425,7 @@ form .checkbox-group {
 form .checkbox-group input[type=checkbox] {
   width: 1.2rem;
   height: 1.2rem;
+  border: 0.06rem solid red;
 }
 form .checkbox-group label {
   margin: 0;
@@ -423,7 +438,30 @@ form label {
 form input {
   padding: 1rem;
   border-radius: 8px !important;
-  border: 1px solid #9397AD;
+  border: 1px solid #D4D7E5;
+}
+form input::placeholder {
+  opacity: 0.4;
+}
+form input.input-validation-error {
+  border: 0.06rem solid #EF4444 !important;
+  color: #EF4444;
+}
+form input.input-validation-error::placeholder {
+  color: #EF4444;
+}
+form span {
+  display: block;
+}
+form span.field-validation-error {
+  top: 0;
+  right: 0;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #EF4444;
 }
 
 header {
@@ -617,15 +655,17 @@ footer .container .social-media {
 }
 @media (min-width: 1200px) {
   #signup .container {
-    width: 45%;
+    width: 40%;
   }
 }
 #signup .container form {
-  gap: 0;
+  padding: 1rem;
 }
 #signup .container form .content {
   display: grid;
   gap: 0 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "firstname" "lastname" "email" "password" "confirm" "terms" "button";
 }
 @media (min-width: 768px) {
   #signup .container form .content {
@@ -650,4 +690,7 @@ footer .container .social-media {
 }
 #signup .container form .content #form-terms {
   grid-area: terms;
+}
+#signup .container form .content #form-submit {
+  grid-area: button;
 }
