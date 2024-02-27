@@ -65,6 +65,23 @@ form {
             }
         }
 
+        textarea {
+            padding: 1rem;
+            border-radius: 0.5rem !important;
+            border: 0.06 rem solid $gray-400;
+            resize: none;
+
+            &::placeholder {
+                opacity: 0;
+            }
+
+            &.input-validation-error {
+                border: 0.06rem solid $danger !important;
+                color: $danger;
+            }
+        }
+        
+
     span {
         display: block;
 
