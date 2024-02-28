@@ -1,4 +1,5 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+﻿@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 html, body {
   line-height: 160%;
   font-weight: 400;
@@ -395,7 +396,6 @@ a:hover {
 form {
   width: 100%;
   display: grid;
-  gap: 1rem;
 }
 form .input-group {
   margin: 1rem 0;
@@ -415,19 +415,46 @@ form .Checkbox span.field-validation-error {
   font-size: 14px !important;
   color: #EF4444;
 }
-form .checkbox-group {
-  margin: 1rem 0;
+form .Checkbox .checkbox-group {
+  position: relative;
+  height: 50px;
+  /*
+  .field-validation-error-terms {
+
+
+      &::after {
+          @include text-s;
+          color: $danger;
+          position: absolute;
+          right: 10px;
+          top: 0px;
+          z-index: 10;
+          font-size: 2em;
+          display: block;
+          content: '\2BBF';
+      }
+  }*/
+}
+form .Checkbox .checkbox-group .input-group {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
-form .checkbox-group input[type=checkbox] {
+form .Checkbox .checkbox-group .input-group input[type=checkbox] {
   width: 1.2rem;
   height: 1.2rem;
   border: 0.06rem solid red;
 }
-form .checkbox-group label {
+form .Checkbox .checkbox-group .input-group input[type=checkbox].input-validation-error {
+  position: relative;
+  bow-shadow: 0 0 0 0.06rem #EF4444;
+  color: #EF4444;
+}
+form .Checkbox .checkbox-group .input-group input[type=checkbox].input-validation-error::placeholder {
+  color: #EF4444;
+}
+form .Checkbox .checkbox-group .input-group label {
   margin: 0;
   font-weight: 400;
 }
@@ -444,11 +471,16 @@ form input::placeholder {
   opacity: 0.4;
 }
 form input.input-validation-error {
+  position: relative;
   border: 0.06rem solid #EF4444 !important;
   color: #EF4444;
 }
 form input.input-validation-error::placeholder {
   color: #EF4444;
+}
+form input:focus {
+  outline: none;
+  border: 0.06rem solid #9397AD;
 }
 form textarea {
   padding: 1rem;
@@ -457,14 +489,11 @@ form textarea {
   resize: none;
 }
 form textarea::placeholder {
-  opacity: 0;
+  opacity: 0.4;
 }
 form textarea.input-validation-error {
   border: 0.06rem solid #EF4444 !important;
   color: #EF4444;
-}
-form span {
-  display: block;
 }
 form span.field-validation-error {
   top: 0;
@@ -475,6 +504,15 @@ form span.field-validation-error {
   font-family: "Manrope", sans-serif;
   font-size: 14px !important;
   color: #EF4444;
+}
+form span.field-validation-error::after {
+  position: absolute;
+  right: 10px;
+  top: 67px;
+  z-index: 10;
+  font-size: 2em;
+  display: block;
+  content: "⮿";
 }
 
 header {
@@ -750,6 +788,12 @@ footer .container .social-media {
 #account-details aside {
   border-right: 1px solid #E2E5F1;
   padding-right: 20px;
+  display: none;
+}
+@media (min-width: 768px) {
+  #account-details aside {
+    display: block;
+  }
 }
 #account-details aside .profile-info {
   margin: 20px;
@@ -792,8 +836,16 @@ footer .container .social-media {
 #account-details .details .basic-info form .content {
   display: grid;
   gap: 1rem 2rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "firstname lastname" "email phone" "bio bio" "buttons buttons";
+  grid-template-columns: 1fr;
+  grid-template-areas: "firstname" "lastname" "email" "phone" "bio" "buttons";
+}
+@media (min-width: 768px) {
+  #account-details .details .basic-info form .content {
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstname lastname" "email phone" "bio bio" "buttons buttons";
+  }
 }
 #account-details .details .basic-info form .content #form-firstname {
   grid-area: firstname;
