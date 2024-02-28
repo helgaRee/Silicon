@@ -24,5 +24,5 @@ const CheckScreenSize = () => {
 
 
 //anropa
-window.addEventListener('resize', checkScreenSize);
+window.addEventListener('resize', CheckScreenSize);
 CheckScreenSize();

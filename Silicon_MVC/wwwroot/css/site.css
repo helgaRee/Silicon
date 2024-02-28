@@ -415,7 +415,7 @@ form .Checkbox span.field-validation-error {
   font-size: 14px !important;
   color: #EF4444;
 }
-form .Checkbox .checkbox-group {
+form .checkbox-group {
   position: relative;
   height: 50px;
   /*
@@ -435,26 +435,26 @@ form .Checkbox .checkbox-group {
       }
   }*/
 }
-form .Checkbox .checkbox-group .input-group {
+form .checkbox-group .input-group {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
 }
-form .Checkbox .checkbox-group .input-group input[type=checkbox] {
+form .checkbox-group .input-group input[type=checkbox] {
   width: 1.2rem;
   height: 1.2rem;
   border: 0.06rem solid red;
 }
-form .Checkbox .checkbox-group .input-group input[type=checkbox].input-validation-error {
+form .checkbox-group .input-group input[type=checkbox].input-validation-error {
   position: relative;
   bow-shadow: 0 0 0 0.06rem #EF4444;
   color: #EF4444;
 }
-form .Checkbox .checkbox-group .input-group input[type=checkbox].input-validation-error::placeholder {
+form .checkbox-group .input-group input[type=checkbox].input-validation-error::placeholder {
   color: #EF4444;
 }
-form .Checkbox .checkbox-group .input-group label {
+form .checkbox-group .input-group label {
   margin: 0;
   font-weight: 400;
 }

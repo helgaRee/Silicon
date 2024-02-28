@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Silicon_MVC.ViewModels;
 
+
 namespace Silicon_MVC.Controllers;
 
 public class AuthController : Controller
